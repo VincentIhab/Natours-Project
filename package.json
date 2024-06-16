@@ -1,0 +1,19 @@
+{
+  "name": "natours-project",
+  "version": "1.0.0",
+  "description": "just some sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seyedleheb/Natours-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seyedleheb/Natours-Project/issues"
+  },
+  "homepage": "https://github.com/seyedleheb/Natours-Project#readme"
+}
