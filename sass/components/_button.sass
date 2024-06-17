@@ -1,0 +1,48 @@
+
+.btn 
+  &:link,
+  &:visited
+    text-decoration: none
+    text-transform: uppercase
+    padding: 1.5rem 4rem
+    display: inline-block
+    border-radius: 10rem
+    transition: transform, box-shadow 0.3s
+    box-shadow: 0 10px 20px $color-black
+    position: relative
+
+  &:hover
+    ransform: translateY(-0.3rem)
+    ox-shadow: 0 10px 20px #0000001a
+    &::after
+      transform: scaleX(1.1) scaleY(1.1)
+      opacity: 0
+
+  &:active
+    transform: translateY(-0.1rem)
+    box-shadow: 0 10px 30px #ffffff3b
+  
+  
+  &-white
+    background-color: $color-white
+    color: $color-gray-dark
+    &::after
+       background-color: #fffffff3
+
+  &::after
+    content: ""
+    display: inline-block
+    height: 100%
+    width: 100%
+    border-radius: 10rem
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    transition: transform, opacity, 0.4s
+  &--animate
+    animation: moveInBottom 0.4s ease-in 0.55s
+    animation-fill-mode: backwards
+
+
+
