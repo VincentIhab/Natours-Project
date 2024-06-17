@@ -4,7 +4,7 @@
   "description": "just some sass",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "compile:sass": "node-sass sass/Main.scss css/style.css -w"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/seyedleheb/Natours-Project/issues"
   },
-  "homepage": "https://github.com/seyedleheb/Natours-Project#readme"
+  "homepage": "https://github.com/seyedleheb/Natours-Project#readme",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
 }
