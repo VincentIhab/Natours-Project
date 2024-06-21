@@ -40,6 +40,7 @@ body {
   margin-top: 10rem;
 }
 
+
 .u-margin-top-medium {
   margin-top: 4rem;
 }
@@ -47,6 +48,7 @@ body {
 .u-padding-small {
   padding: 2rem 0 5rem 0;
 }
+
 
 body {
   font-family: "Lato", "sans-serif";
@@ -169,6 +171,7 @@ body {
 }
 
 .section-stories {
+
   padding: 15rem 0 5rem 0;
   position: relative;
 }
@@ -189,6 +192,8 @@ body {
 .book__form {
   width: 100%;
   padding: 6rem 0rem;
+  background-color: #f7f7f7;
+
 }
 
 .navigation__checkbox {
@@ -625,7 +630,9 @@ body {
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.2392156863);
+
   background-color: rgba(255, 255, 255, 0.5);
+
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
@@ -674,6 +681,7 @@ body {
   transform: translateX(-4rem) scale(1);
   filter: blur(5px) contrast(110%) brightness(65%);
 }
+
 
 .bg-video {
   position: absolute;
@@ -790,5 +798,6 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 
 /*# sourceMappingURL=style.css.map */
