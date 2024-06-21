@@ -179,7 +179,7 @@ body {
 }
 
 .book {
-  background-image: linear-gradient(105deg, rgba(255, 119, 48, 0.1), transparent, rgba(247, 247, 247, 0.4));
+  background-image: linear-gradient(105deg, rgba(247, 247, 247, 0.9), transparent, rgba(153, 153, 153, 0.6));
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3098039216);
   height: 55rem;
@@ -189,6 +189,82 @@ body {
 .book__form {
   width: 100%;
   padding: 6rem 0rem;
+}
+
+.navigation__checkbox {
+  display: none;
+}
+.navigation__button {
+  background-color: #fff;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 100px;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  z-index: 2500;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.35);
+}
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 100px;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#43703b, #061611);
+  z-index: 1000;
+  transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.navigation__nav {
+  height: 100vh;
+  width: 0%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  transition: all 0.9s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.navigation__list {
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+.navigation__item {
+  margin: 2rem;
+}
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, rgba(114, 114, 114, 0.662745098) 50%, #fff 100%);
+  background-size: 220%;
+  transition: all 0.5s;
+}
+.navigation__link:link span, .navigation__link:visited span {
+  margin-right: 1.5rem;
+  display: inline-block;
+}
+.navigation__link:hover, .navigation__link:active {
+  color: #061611;
+  background-position: 100%;
+  transform: translateX(1rem);
+}
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80);
+}
+.navigation__checkbox:checked ~ .navigation__nav {
+  width: 100%;
+  opacity: 1;
 }
 
 .header {
@@ -256,8 +332,6 @@ body {
   background-color: #061611;
   padding: 10rem 0;
   font-size: 1rem;
-}
-.footer__logo-box {
   text-align: center;
 }
 .footer__logo-box img {
@@ -265,7 +339,6 @@ body {
   height: auto;
 }
 .footer__navigation {
-  border-top: 1px solid #43703b;
   padding-top: 2rem;
   display: inline-block;
 }
@@ -286,12 +359,11 @@ body {
 .footer__link:hover, .footer__link:active {
   color: #55c57a;
   text-shadow: 0 1rem 2rem #55c57a;
-  transform: rotate(5deg) scale(1.2);
+  transform: rotate(1deg) scale(1.5);
 }
 .footer__copyright {
   color: #999;
   padding-top: 2rem;
-  text-align: center;
 }
 .footer__copyright a {
   color: #ff7730;
