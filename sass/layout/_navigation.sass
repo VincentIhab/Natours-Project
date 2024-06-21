@@ -1,0 +1,87 @@
+.navigation
+    &__checkbox
+        display: none
+      
+        
+    &__button
+        background-color: $color-white
+        height: 7rem
+        width: 7rem
+        border-radius: 100px 
+        position: fixed
+        top: 6rem
+        right: 6rem
+        z-index: 2500
+        box-shadow: 0 1rem 3rem rgba($color-black , .35 )
+        
+    &__background
+        height: 6rem
+        width: 6rem
+        border-radius: 100px
+        position: fixed
+        top: 6.5rem
+        right: 6.5rem
+        background-image: radial-gradient($color-primary-light,$color-primary-dark)
+        z-index: 1000
+        transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1)
+        // transform: scale(75)
+        
+    &__nav
+        height: 100vh
+        width: 0%
+        opacity: 0
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 2000
+        transition: all .9s cubic-bezier(0.86, 0, 0.07, 1)
+        
+    &__list
+        list-style: none
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        text-align: center
+        width: 100%
+        
+    &__item
+        margin:2rem
+
+        
+    &__link
+        &:link,
+        &:visited
+            display: inline-block
+            font-size: 3rem
+            font-weight: 300
+            padding: 1rem 2rem
+            color: $color-white
+            text-decoration: none
+            text-transform: uppercase
+            background-image: linear-gradient(120deg, transparent 0%, #727272a9 50%, $color-white 100%)
+            background-size: 220%
+            transition: all .5s
+
+            span 
+                margin-right: 1.5rem
+                display: inline-block
+        &:hover,
+        &:active
+            // background-size: 100%
+            color: $color-primary-dark
+            background-position: 100%
+            transform: translateX(1rem)
+    
+    &__checkbox:checked ~ &__background
+        transform: scale(80)
+    
+    &__checkbox:checked ~ &__nav
+        width: 100%
+        opacity: 1
+
+
+        
+        
+
+        

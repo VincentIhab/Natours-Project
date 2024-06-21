@@ -1,0 +1,104 @@
+.form
+   text-align: center
+   width:100%
+   &__group
+      display inline-block
+   &__group:not(:last-child)
+      margin-bottom: 2rem
+
+   &__input
+      margin: 0 auto 0 13.5rem
+      font-size: 1.6rem
+      font-family: inherit
+      color: inherit
+      padding: 1.5rem 2rem
+      border-radius: 3px
+      background-color: transparent
+      border: none
+      font-weight: 800
+      border-bottom: 2px solid $color-primary-dark
+      width: 60%
+      display: block
+      transition: all .3s
+
+      &:focus
+        outline: none
+        box-shadow: 0 1rem 2rem rgba($color-black, .1)
+        border-bottom: 3px solid $color-primary
+        background-color: transparent
+
+      &:focus:invalid
+        border-bottom: 2px solid $color-secondery-light-2
+        background-color: transparent
+
+      &::-webkit-input-placeholder
+        color: $color-grey-dark-2
+
+   &__label
+      text-align: left !important
+      font-size: 1.2rem
+      font-weight: 700
+      margin-left: -30rem
+      margin-top: .7rem
+      display: inline-block
+      transition: all .3s ease-in
+
+   &__input:placeholder-shown + &__label
+      opacity: 0
+      visibility: hidden
+      transform: translateY(-4rem)
+    
+   &__group:nth-child(4)
+      display: flex
+      justify-content: space-around
+      flex-wrap: nowrap
+      width:70%
+      margin: 0 auto
+      
+      
+
+   &__radio-input
+      display: none
+
+   &__radio-label
+      font-size: $default-font-size
+      cursor: pointer
+      position: relative
+      padding-left: 2.9rem
+
+   &__radio-button
+      height: 2rem
+      width: 2rem
+      border: 4px solid $color-primary-light
+      border-radius: 50%
+      display: inline-block
+      position: absolute
+      left: 0
+      top: -.12rem
+      
+
+      &::after
+        content: ''
+        display: block
+        border-radius: 50%
+        height: 1rem
+        width: 1rem
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        background-color: $color-primary-light
+        opacity: 0
+        transition: opacity .1s
+    
+
+   &__radio-input:checked ~ &__radio-label &__radio-button::after
+      opacity: 1
+    
+   &__button
+      display: flex !important
+      text-align: left
+      width: 68%
+      justify-content: center
+      align-items: center
+
