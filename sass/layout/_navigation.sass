@@ -15,6 +15,14 @@
         box-shadow: 0 1rem 3rem rgba($color-black , .35 )
         text-align: center
         cursor: pointer
+        @include respond(tap-port)
+           height: 6rem
+           width: 6rem
+           top: 3rem
+           right: 7rem
+        @include respond(phone)
+           top: 3.5rem
+           right: 4.5rem
 
     &__background
         height: 6rem
@@ -25,18 +33,26 @@
         right: 6.5rem
         background-image: radial-gradient($color-primary-light,$color-primary-dark)
         z-index: 1000
-        transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1)
+        transition: transform .9s cubic-bezier(0.86, 0, 0.07, 1)
         // transform: scale(75)
+        @include respond(tap-port)
+           height: 5rem
+           width: 5rem
+           top: 3rem
+           right: 7rem
+        @include respond(phone)
+           top: 3.5rem
+           right: 4.5rem
         
     &__nav
         height: 100vh
-        width: 0%
+        width: 100%
         opacity: 0
         position: fixed
-        top: 0
+        top: 125rem
         left: 0
         z-index: 2000
-        transition: all .9s cubic-bezier(0.86, 0, 0.07, 1)
+        transition: all .8s ease 
         
     &__list
         list-style: none
@@ -79,14 +95,15 @@
         transform: scale(80)
     
     &__checkbox:checked ~ &__nav
-        width: 100%
         opacity: 1
+        top: 0
     
 
     &__icon
         margin-top: 3.4rem
         position: relative
-        
+        @include respond(tap-port)
+            margin-top: 3rem
         &,
         &::before,
         &::after
@@ -102,14 +119,21 @@
             transition: all .3s
         &::before
             top: -.8rem
+            @include respond(tap-port)
+              top: -.9rem
         &::after
             top: .8rem
+            @include respond(tap-port)
+              top: .9rem
             
     &__button:hover &__icon::before
         top: -1rem   
 
+           
+
     &__button:hover &__icon::after
         top: 1rem   
+
 
     &__checkbox:checked + &__button &__icon
         background-color: transparent 

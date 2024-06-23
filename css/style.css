@@ -10,6 +10,21 @@
 html {
   font-size: 62.5%;
 }
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   box-sizing: border-box;
@@ -71,12 +86,24 @@ body {
   animation-duration: 0.9s;
   animation-timing-function: ease-out;
 }
+@media (max-width: 37.5em) {
+  .heading-primary--main {
+    letter-spacing: 1rem;
+    font-size: 5rem;
+  }
+}
 .heading-primary--sub {
   display: inline-block;
   font-size: 2rem;
   font-weight: 700;
   animation: moveInRight 1s ease-out;
   letter-spacing: 1.75rem;
+}
+@media (max-width: 37.5em) {
+  .heading-primary--sub {
+    letter-spacing: 0.5rem;
+    font-size: 1.7rem;
+  }
 }
 
 .heading-secondery {
@@ -89,6 +116,11 @@ body {
   display: inline-block;
   letter-spacing: 2px;
   transition: all 0.2s;
+}
+@media (max-width: 37.5em) {
+  .heading-secondery {
+    font-size: 2.5rem;
+  }
 }
 .heading-secondery:hover {
   transform: skewY(2deg) skewX(15deg) scale(1.1);
@@ -163,7 +195,7 @@ body {
 }
 
 .section-tours {
-  background-color: #FDF9F4;
+  background-color: #FEFAF5;
   padding: 25rem 0 15rem 0;
   margin-top: -12rem;
 }
@@ -209,6 +241,20 @@ body {
   text-align: center;
   cursor: pointer;
 }
+@media (max-width: 56.25em) {
+  .navigation__button {
+    height: 6rem;
+    width: 6rem;
+    top: 3rem;
+    right: 7rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .navigation__button {
+    top: 3.5rem;
+    right: 4.5rem;
+  }
+}
 .navigation__background {
   height: 6rem;
   width: 6rem;
@@ -218,17 +264,31 @@ body {
   right: 6.5rem;
   background-image: radial-gradient(#43703b, #061611);
   z-index: 1000;
-  transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.9s cubic-bezier(0.86, 0, 0.07, 1);
+}
+@media (max-width: 56.25em) {
+  .navigation__background {
+    height: 5rem;
+    width: 5rem;
+    top: 3rem;
+    right: 7rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .navigation__background {
+    top: 3.5rem;
+    right: 4.5rem;
+  }
 }
 .navigation__nav {
   height: 100vh;
-  width: 0%;
+  width: 100%;
   opacity: 0;
   position: fixed;
-  top: 0;
+  top: 125rem;
   left: 0;
   z-index: 2000;
-  transition: all 0.9s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: all 0.8s ease;
 }
 .navigation__list {
   list-style: none;
@@ -267,12 +327,17 @@ body {
   transform: scale(80);
 }
 .navigation__checkbox:checked ~ .navigation__nav {
-  width: 100%;
   opacity: 1;
+  top: 0;
 }
 .navigation__icon {
   margin-top: 3.4rem;
   position: relative;
+}
+@media (max-width: 56.25em) {
+  .navigation__icon {
+    margin-top: 3rem;
+  }
 }
 .navigation__icon, .navigation__icon::before, .navigation__icon::after {
   width: 3rem;
@@ -289,8 +354,18 @@ body {
 .navigation__icon::before {
   top: -0.8rem;
 }
+@media (max-width: 56.25em) {
+  .navigation__icon::before {
+    top: -0.9rem;
+  }
+}
 .navigation__icon::after {
   top: 0.8rem;
+}
+@media (max-width: 56.25em) {
+  .navigation__icon::after {
+    top: 0.9rem;
+  }
 }
 .navigation__button:hover .navigation__icon::before {
   top: -1rem;
@@ -317,6 +392,11 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+@media (max-width: 37.5em) {
+  .header {
+    clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+  }
 }
 .header__logo-box {
   position: absolute;
@@ -346,11 +426,32 @@ body {
 .row:not(:last-child) {
   margin-bottom: 8rem;
 }
+@media (max-width: 56.25em) {
+  .row:not(:last-child) {
+    margin-bottom: 6rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .row {
+    max-width: 50rem;
+  }
+}
 .row [class^=col-] {
   float: left;
 }
 .row [class^=col-]:not(:last-child) {
   margin-right: 6rem;
+  margin-bottom: 6rem;
+}
+@media (max-width: 56.25em) {
+  .row [class^=col-]:not(:last-child) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 56.25em) {
+  .row [class^=col-] {
+    width: 100% !important;
+  }
 }
 .row .col-1-of-2 {
   width: calc((100% - 6rem) / 2);
@@ -855,7 +956,7 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s;
-  z-index: 5000;
+  z-index: 4 0;
 }
 .popup__content {
   position: absolute;

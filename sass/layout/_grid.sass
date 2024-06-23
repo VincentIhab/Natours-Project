@@ -5,12 +5,23 @@
 
     &:not(:last-child)
         margin-bottom: $gutter-vertical
-        
 
+        @include respond(tap-port)
+           margin-bottom: $gutter-vertical-small
+
+    @include respond(tap-port)
+           max-width: 50rem
+        
     [class^="col-"] 
         float: left
         &:not(:last-child) 
            margin-right: $gutter-horizontal
+           margin-bottom: $gutter-vertical-small
+           @include respond(tap-port)
+              margin-right: 0
+
+        @include respond(tap-port)
+           width: 100% !important
             
     .col-1-of-2
         width: calc( (100% - #{$gutter-horizontal}) / 2  )
