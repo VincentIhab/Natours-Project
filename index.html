@@ -12,13 +12,15 @@
     <link rel="stylesheet" href="css/iconfont.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-
     <title>Natours | Exciting tours for adventurous people</title>
+    <script  src="script.js" defer></script>
   </head>
   <body>
     <div class="navigation">
       <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-      <label for="navi-toggle" class="navigation__button">menu</label>
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
       <div class="navigation__background">&nbsp;</div>
       <nav class="navigation__nav">
         <ul class="navigation__list">
@@ -117,7 +119,7 @@
         </div>
       </section>
 
-      <section class="section-tours">
+      <section class="section-tours" id="section-tours">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondery">Most popular tours</h2>
         </div>
@@ -148,7 +150,7 @@
                         <p class="card__price-only">Only</p>
                         <p class="card__price-value">$297</p>
                     </div>
-                    <a href="" class="btn btn-white">Book Now!</a>
+                    <a href="#popup" class="btn btn-white">Book Now!</a>
                 </div>
               </div>
 
@@ -178,7 +180,7 @@
                       <p class="card__price-only">Only</p>
                       <p class="card__price-value">$497</p>
                   </div>
-                  <a href="" class="btn btn-white">Book Now!</a>
+                  <a href="#popup" class="btn btn-white">Book Now!</a>
               </div>
               </div>
             </div>
@@ -208,7 +210,7 @@
                       <p class="card__price-only">Only</p>
                       <p class="card__price-value">$897</p>
                   </div>
-                  <a href="" class="btn btn-white">Book Now!</a>
+                  <a href="#popup" class="btn btn-white">Book Now!</a>
                 </div>
               </div>
 
@@ -223,47 +225,11 @@
         </div>
       </section>
 
-      <section class='section-stories'>
-        <div class="u-center-text u-margin-bottom-big">
-          <h2 class="heading-secondery">We make people genuinely happy</h2>
-        </div>
-        <div class="row">
-          <div class="story">
-            <figure class='story__shape'>
-               <img class="story__img" src="./img//nat-8.jpg" alt="person on a tour">
-               <figcaption class="story__caption">
-                  Mary Smith
-               </figcaption>
-            </figure>
-            <div class="story__text">
-              <h3 class="heading-tertiary u-margin-bottom-small">I had bestweek ever with my family</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda nihil ullam voluptatem molestias? Suscipit cumque doloribus maiores obcaecati reprehenderit! Quasi porro debitis veritatis atque ducimus. Nemo magni quam omnis dolores.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="story">
-            <figure class='story__shape'>
-               <img class="story__img" src="./img//nat-9.jpg" alt="person on a tour">
-               <figcaption class="story__caption">
-                  Jack Wilson
-               </figcaption>
-            </figure>
-            <div class="story__text">
-              <h3 class="heading-tertiary u-margin-bottom-small">wow this trip give inspiration to rebuild my thinkingg  </h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda nihil ullam voluptatem molestias? Suscipit cumque doloribus maiores obcaecati reprehenderit! Quasi porro debitis veritatis atque ducimus. Nemo magni quam omnis dolores.</p>
-            </div>
-          </div>
-
-
-        <div class="u-center-text u-margin-top-huge">
-                <a href="'#" class="btn btn--green ">Discover all tours </a>
-        </div>
-      </section>
+      
 
       <section class='section-stories'>
-        <div class="bg-video">
-          <video class="bg-video__content" autoplay muted loop>
+        <div id="bg-video" class="bg-video">
+          <video id="bg-video__content" class="bg-video__content" autoplay muted loop>
             <source src="./img/video.mp4" type="video/mp4">
             <source src="./img/video.webm" type="video/webm">
           </video>
@@ -304,7 +270,7 @@
 
         </div>
         <div class="u-center-text u-margin-top-huge">
-          <a href="'#" class="btn-text ">Read all stories &rarr;</a>
+          <a href="'#" class="btn btn-white  ">Read all stories &rarr;</a>
         </div>
 
       </section>
@@ -341,7 +307,7 @@
                   </div>
                </div>
                 <div class="form__radio-group form__button u-padding-small u-margin-top-medium">
-                  <button class="btn btn--green">Next step &rarr;</button>
+                  <button class="btn btn-white">Next step &rarr;</button>
                 </div>
               </form>
             </div>
@@ -382,6 +348,24 @@
         </p>
       </div>
     </footer>
+    <div class="popup" id="popup">
+      <div class=popup__content>
+        <div class="popup__left">
+          <img src="./img/nat-8.jpg" alt="img">
+          <img src="./img/nat-9.jpg" alt="img">
+        </div>
+        <div class="popup__right">
+          <a href="#section-tours" class="popup__close">&times;</a>
+          <h2 class="heading-secondery">start booking now</h2>
+          <h3 class="heading-tertiary u-margin-bottom-small">important &ndash;</h3>
+            <p class="u-margin-bottom-small">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis quam impedit quae, consectetur rem iusto eius sunt culpa illo excepturi, enim assumenda aliquam itaque a, dicta dolorum incidunt iste repellat.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis quam impedit quae, consectetur rem iusto eius sunt culpa illo excepturi, enim assumenda aliquam itaque a, dicta dolorum incidunt iste repellat.
+            </p>
+          <a href="" class="btn btn-white">book now</a>
+        </div>
+      </div>
+     </div>
     <!-- <section class="grid-test">
       <div class="row">
         <div class="col-1-of-2">
