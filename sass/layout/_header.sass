@@ -5,12 +5,13 @@
   background-size: cover
   background-position: top
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
-  @include respond(phone)
-      clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%)
+  @include respond(tap-port)
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%)
+
   &__logo-box
     position: absolute
     top: 4rem
-    left: 4rem
+    left: 15rem
   &_logo
     height: 3.5rem
 
@@ -21,6 +22,9 @@
     transform: translate(-50%, -50%)
     text-align: center
 
+  @include respond(tap-port)
+    &__logo-box
+      left: 2.5rem
 
 
 

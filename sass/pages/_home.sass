@@ -1,8 +1,9 @@
 .section-about
     background-color: $color-grey-light-1
-    padding: 25rem
-    padding-bottom: 27.5rem
+    padding: 25rem 0
     margin-top:-20vh 
+    @include respond(tap-port)
+       padding: 30rem 2.5rem 22.5rem 2.5rem
 
 
 .section-features 
@@ -15,6 +16,9 @@
 
     & > * 
         transform: skewY(7deg)
+    
+    @include respond(tap-port)
+       padding: 20rem 0
 
 .section-tours 
     background-color: #FEFAF5
@@ -22,15 +26,22 @@
     margin-top:-12rem
 
 
+    @include respond(tap-port)
+       padding: 20rem  0
+
 
 .section-stories 
-    padding: 15rem 0 5rem 0
+    padding: 15rem 0 10rem 0
     position: relative
+    @include respond(tap-port)
+       padding: 10rem  0 
 
 
 .section-book
-    padding: 15rem
+    padding: 10rem 15rem 25rem 15rem
     background-size: cover
+    @include respond(tap-port)
+       padding: 20rem  0 30rem 0 
 
 
 
@@ -40,12 +51,17 @@
     -webkit-backdrop-filter: blur(10px)
     border-radius: 9px
     box-shadow: 0 1.5rem 4rem #0000004f
-    height: 55rem
     width:60%
-    margin: 0 auto
+    margin: 0 auto 
     
     &__form
         width:100%
         padding:6rem 0rem
-        
+            
+    @include respond(tap-port)
+        &__form
+           padding:6rem 0rem 4rem 0rem
+        width:100%  
+        overflow-x: hidden   
+    
 

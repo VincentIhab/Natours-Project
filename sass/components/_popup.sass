@@ -8,7 +8,7 @@
     opacity: 0
     visibility: hidden
     transition: all .2s 
-    z-index: 4 000
+    z-index: 4000
         
     &__content
         @include absCenter
@@ -21,11 +21,15 @@
         transform: translate(-50%,-50%) scale(.5)
         opacity: 0
         transition: all .5s .2s
+        @include respond(tap-port)
+            width: 95%  
 
     &__left
         width: 33.3333333%
         display: table-cell
         vertical-align: middle
+        @include respond(tap-port)
+            display: none
         img
             display: block
             width: 100%
@@ -34,6 +38,10 @@
         display: table-cell
         vertical-align: middle
         padding: 3rem 5rem 
+        @include respond(tap-land)
+            padding: 0 5rem 
+        @include respond(tap-port)
+            padding: 3rem 5rem 
         p 
             font-size: 1.4rem 
             margin-bottom: 4rem 
@@ -41,6 +49,12 @@
             column-gap: 4rem
             column-role: 1px solid $color-grey-dark-2 
             hyphens: auto
+            @include respond(tap-land)
+               column-count: 1
+            @include respond(tap-port)
+               column-count: 2
+            @include respond(phone) 
+               column-count: 1
 
     
         

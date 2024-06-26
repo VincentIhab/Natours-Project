@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&display=swap')
 .card
     perspective: 150rem
     -moz-perspective: 150rem
@@ -5,9 +6,8 @@
     height:52rem
 
     &__side 
-        background-color: #000
         height:52rem
-        transition: all .5s ease
+        transition: all .7s ease
         position: absolute
         top:0
         left:0
@@ -15,8 +15,9 @@
         -webkit-backface-visibility: hidden
         -moz-backface-visibility: hidden
         backface-visibility: hidden
-        border-radius:5px
+        border-radius: 8px
         overflow: hidden 
+        background-image: linear-gradient(to bottom, #000000,#000000)
         box-shadow: 1 1.5rem 4rem $color-black
         &--front
             background-color: $color-white
@@ -72,16 +73,26 @@
         &--3
             background-image: linear-gradient(to right bottom,rgba($color-tertiary-light,.85), rgba($color-tertiary-light-2,.85))
 
+    &__details_1
+        background-image: linear-gradient(to top, rgba($color-secondery-light-2, .4 ),$color-black)
+    &__details_2
+        background-image: linear-gradient(to top, rgba($color-primary, .3 ), $color-black)
+    &__details_3
+        background-image: linear-gradient(to top, rgba($color-tertiary-light, .4 ),$color-black)
+        
     &__details
+        text-align: left
         padding: 3rem
         ul
             list-style: none
             width:80%
             margin: 0 auto
             li
-                text-align: center
-                font-size: 1.5rem
-                padding: 1rem
+                font-size: 2rem
+                font-weight: 100 !important
+                font-family: sans-serif
+                color: #feef
+                padding: .6rem 
 
                 &:not(:last-child)
                    border-bottom: 1px solid rgba($color-gray-dark, .15)
@@ -105,3 +116,47 @@
     &__price-value
         font-size: 6rem
         font-weight: 300
+
+    @include respond(tap-port)
+        height: fit-content
+        border-radius:5px
+        box-shadow: 1 1.5rem 4rem $color-black
+        &__side 
+            position: relative
+            height: auto
+            box-shadow: none
+            border-radius: 0px
+            
+            &--front
+                border-radius: 8px 8px 0 0
+            &--back
+                transform: rotateY(0deg)
+                border-radius: 0 0 8px 8px 
+
+
+        &:hover &__side--front
+            transform: rotateY(0deg)
+
+        &__cta 
+            position: relative
+            top:0%
+            left:0%
+            transform: translate(0)
+            width: 100%
+            padding: 5rem 6rem 5rem 6rem
+
+        &__price-box 
+            margin-bottom: 3rem
+
+        &__price-only
+            font-size: 1.4rem
+            text-transform: uppercase
+
+        &__price-value
+            font-size: 6rem
+        
+        &__details
+            text-align: center
+
+
+

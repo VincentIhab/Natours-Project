@@ -1,4 +1,6 @@
 .navigation
+
+    overflow: hidden
     &__checkbox
         display: none
       
@@ -9,8 +11,8 @@
         width: 7rem
         border-radius: 100px 
         position: fixed
-        top: 6rem
-        right: 6rem
+        top: 3rem
+        right: 25rem
         z-index: 2500
         box-shadow: 0 1rem 3rem rgba($color-black , .35 )
         text-align: center
@@ -22,16 +24,16 @@
            right: 7rem
         @include respond(phone)
            top: 3.5rem
-           right: 4.5rem
+           right: 3rem
 
     &__background
         height: 6rem
         width: 6rem
         border-radius: 100px
         position: fixed
-        top: 6.5rem
-        right: 6.5rem
-        background-image: radial-gradient($color-primary-light,$color-primary-dark)
+        top: 3.5rem
+        right: 25rem
+        background-image: radial-gradient($color-primary-dark,#0d4115)
         z-index: 1000
         transition: transform .9s cubic-bezier(0.86, 0, 0.07, 1)
         // transform: scale(75)
@@ -42,7 +44,7 @@
            right: 7rem
         @include respond(phone)
            top: 3.5rem
-           right: 4.5rem
+           right: 3rem
         
     &__nav
         height: 100vh
